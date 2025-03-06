@@ -97,5 +97,31 @@ namespace ChineseRomanisation
         public static ChinesePhoneme Uue => new ChinesePhoneme(ChinesePhonemeType.Final, "üe", "üeh", "ㄩㄝ");
         public static ChinesePhoneme Uun => new ChinesePhoneme(ChinesePhonemeType.Final, "ün", "ün", "ㄩㄣ");
         public static ChinesePhoneme Uuan => new ChinesePhoneme(ChinesePhonemeType.Final, "üan", "üan", "ㄩㄢ");
+
+        public override bool Equals(object obj)
+        {
+            if (obj is ChinesePhoneme)
+            {
+                var p = obj as ChinesePhoneme;
+
+                return p.Type == Type && p.HanyuPinyin == HanyuPinyin && p.WadeGiles == WadeGiles && p.ZhuyinFuhao == ZhuyinFuhao;
+            }
+
+            return false;
+        }
+
+        public override string ToString()
+        {
+            return ToString("HP");
+        }
+
+        public string ToString(string format)
+        {
+            format = format.Replace("HP", HanyuPinyin);
+            format = format.Replace("WG", WadeGiles);
+            format = format.Replace("ZF", ZhuyinFuhao);
+
+            return format;
+        }
     }
 }
