@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ChinesePhoneme.cs" />
     <Compile Include="ChinesePhonemeType.cs" />
+    <Compile Include="ChineseSyllable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
