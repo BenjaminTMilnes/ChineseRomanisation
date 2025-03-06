@@ -23,6 +23,44 @@ namespace ChineseRomanisation
             Final = final;
         }
 
+        public string HanyuPinyin
+        {
+            get
+            {
+                return Initial.HanyuPinyin + Final.HanyuPinyin;
+            }
+        }
+
+        public string WadeGiles
+        {
+            get
+            {
+                // Here we implement the exceptions specified by the Wade-Giles system.
+
+                if (Final == ChinesePhoneme.Ui)
+                {
+                    if (Initial == ChinesePhoneme.G)
+                    {
+                        return "kuei";
+                    }
+                    if (Initial == ChinesePhoneme.K)
+                    {
+                        return "k'uei";
+                    }
+                }
+
+                return Initial.WadeGiles + Final.WadeGiles;
+            }
+        }
+
+        public string ZhuyinFuhao
+        {
+            get
+            {
+                return Initial.ZhuyinFuhao + Final.ZhuyinFuhao;
+            }
+        }
+
         public override bool Equals(object obj)
         {
             if (obj is ChineseSyllable)
@@ -42,9 +80,9 @@ namespace ChineseRomanisation
 
         public string ToString(string format)
         {
-            format = format.Replace("HP", Initial.ToString("HP") + Final.ToString("HP"));
-            format = format.Replace("WG", Initial.ToString("WG") + Final.ToString("WG"));
-            format = format.Replace("ZF", Initial.ToString("ZF") + Final.ToString("ZF"));
+            format = format.Replace("HP", HanyuPinyin);
+            format = format.Replace("WG", WadeGiles);
+            format = format.Replace("ZF", ZhuyinFuhao);
 
             return format;
         }

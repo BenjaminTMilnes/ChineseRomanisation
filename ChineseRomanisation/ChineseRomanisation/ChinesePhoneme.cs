@@ -89,7 +89,7 @@ namespace ChineseRomanisation
         public static ChinesePhoneme U => new ChinesePhoneme(ChinesePhonemeType.Final, "u", "u", "ㄨ");
         public static ChinesePhoneme Uo => new ChinesePhoneme(ChinesePhonemeType.Final, "uo", "uo", "ㄨㄛ");
         public static ChinesePhoneme Ua => new ChinesePhoneme(ChinesePhonemeType.Final, "ua", "ua", "ㄨㄚ");
-        public static ChinesePhoneme Ui => new ChinesePhoneme(ChinesePhonemeType.Final, "ui", "uei", "ㄨㄟ");
+        public static ChinesePhoneme Ui => new ChinesePhoneme(ChinesePhonemeType.Final, "ui", "ui", "ㄨㄟ");
         public static ChinesePhoneme Uai => new ChinesePhoneme(ChinesePhonemeType.Final, "uai", "uai", "ㄨㄞ");
         public static ChinesePhoneme Un => new ChinesePhoneme(ChinesePhonemeType.Final, "un", "un", "ㄨㄣ");
         public static ChinesePhoneme Uan => new ChinesePhoneme(ChinesePhonemeType.Final, "uan", "uan", "ㄨㄢ");
@@ -112,6 +112,16 @@ namespace ChineseRomanisation
             }
 
             return false;
+        }
+
+        public static bool operator ==(ChinesePhoneme phoneme1, ChinesePhoneme phoneme2)
+        {
+            return phoneme1.Equals(phoneme2);
+        }
+
+        public static bool operator !=(ChinesePhoneme phoneme1, ChinesePhoneme phoneme2)
+        {
+            return !phoneme1.Equals(phoneme2);
         }
 
         public override string ToString()
