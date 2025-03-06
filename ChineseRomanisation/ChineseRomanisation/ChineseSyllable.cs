@@ -37,6 +37,22 @@ namespace ChineseRomanisation
             {
                 // Here we implement the exceptions specified by the Wade-Giles system.
 
+                if (Final == ChinesePhoneme.E)
+                {
+                    if (Initial == ChinesePhoneme.G)
+                    {
+                        return "ko";
+                    }
+                    if (Initial == ChinesePhoneme.K)
+                    {
+                        return "k'o";
+                    }
+                    if (Initial == ChinesePhoneme.H)
+                    {
+                        return "ho";
+                    }
+                }
+
                 if (Final == ChinesePhoneme.Ui)
                 {
                     if (Initial == ChinesePhoneme.G)
