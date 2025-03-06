@@ -59,6 +59,8 @@ namespace ChineseRomanisation
         public static ChinesePhoneme L => new ChinesePhoneme(ChinesePhonemeType.Initial, "l", "l", "ㄌ");
         public static ChinesePhoneme R => new ChinesePhoneme(ChinesePhonemeType.Initial, "r", "j", "ㄖ");
 
+        public static List<ChinesePhoneme> Initials => new List<ChinesePhoneme>() { M, N, B, D, G, P, T, K, Z, Zh, J, C, Ch, Q, F, S, Sh, X, H, L, R };
+
         public static ChinesePhoneme _I => new ChinesePhoneme(ChinesePhonemeType.Final, "-i", "ih", "ㄭ");
         public static ChinesePhoneme E => new ChinesePhoneme(ChinesePhonemeType.Final, "e", "ê", "ㄜ");
         public static ChinesePhoneme A => new ChinesePhoneme(ChinesePhonemeType.Final, "a", "a", "ㄚ");
@@ -97,6 +99,8 @@ namespace ChineseRomanisation
         public static ChinesePhoneme Uue => new ChinesePhoneme(ChinesePhonemeType.Final, "üe", "üeh", "ㄩㄝ");
         public static ChinesePhoneme Uun => new ChinesePhoneme(ChinesePhonemeType.Final, "ün", "ün", "ㄩㄣ");
         public static ChinesePhoneme Uuan => new ChinesePhoneme(ChinesePhonemeType.Final, "üan", "üan", "ㄩㄢ");
+
+        public static List<ChinesePhoneme> Finals => new List<ChinesePhoneme>() { _I, E, A, Ei, Ai, Ou, Ao, En, An, Ong, Eng, Ang, Er, I, Ie, Ia, Iu, Iao, In, Ian, Iong, Ing, Iang, U, Uo, Ua, Ui, Uai, Un, Uan, Uang, Uu, Uue, Uun, Uuan };
 
         public override bool Equals(object obj)
         {
