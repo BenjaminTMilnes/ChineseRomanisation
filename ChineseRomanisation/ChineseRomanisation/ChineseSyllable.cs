@@ -53,6 +53,26 @@ namespace ChineseRomanisation
                     }
                 }
 
+                if (Final == ChinesePhoneme.O)
+                {
+                    if (Initial == ChinesePhoneme.G)
+                    {
+                        return "kuo";
+                    }
+                    if (Initial == ChinesePhoneme.K)
+                    {
+                        return "k'uo";
+                    }
+                    if (Initial == ChinesePhoneme.H)
+                    {
+                        return "huo";
+                    }
+                    if (Initial == ChinesePhoneme.Sh)
+                    {
+                        return "shuo";
+                    }
+                }
+
                 if (Final == ChinesePhoneme.Ui)
                 {
                     if (Initial == ChinesePhoneme.G)

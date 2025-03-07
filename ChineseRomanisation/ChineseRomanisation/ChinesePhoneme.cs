@@ -87,7 +87,7 @@ namespace ChineseRomanisation
         public static ChinesePhoneme Iang => new ChinesePhoneme(ChinesePhonemeType.Final, "iang", "iang", "ㄧㄤ");
 
         public static ChinesePhoneme U => new ChinesePhoneme(ChinesePhonemeType.Final, "u", "u", "ㄨ");
-        public static ChinesePhoneme Uo => new ChinesePhoneme(ChinesePhonemeType.Final, "uo", "uo", "ㄨㄛ");
+        public static ChinesePhoneme O => new ChinesePhoneme(ChinesePhonemeType.Final, "o", "o", "ㄨㄛ");
         public static ChinesePhoneme Ua => new ChinesePhoneme(ChinesePhonemeType.Final, "ua", "ua", "ㄨㄚ");
         public static ChinesePhoneme Ui => new ChinesePhoneme(ChinesePhonemeType.Final, "ui", "ui", "ㄨㄟ");
         public static ChinesePhoneme Uai => new ChinesePhoneme(ChinesePhonemeType.Final, "uai", "uai", "ㄨㄞ");
@@ -100,7 +100,7 @@ namespace ChineseRomanisation
         public static ChinesePhoneme Uun => new ChinesePhoneme(ChinesePhonemeType.Final, "ün", "ün", "ㄩㄣ");
         public static ChinesePhoneme Uuan => new ChinesePhoneme(ChinesePhonemeType.Final, "üan", "üan", "ㄩㄢ");
 
-        public static List<ChinesePhoneme> Finals => new List<ChinesePhoneme>() { _I, E, A, Ei, Ai, Ou, Ao, En, An, Ong, Eng, Ang, Er, I, Ie, Ia, Iu, Iao, In, Ian, Iong, Ing, Iang, U, Uo, Ua, Ui, Uai, Un, Uan, Uang, Uu, Uue, Uun, Uuan };
+        public static List<ChinesePhoneme> Finals => new List<ChinesePhoneme>() { _I, E, A, Ei, Ai, Ou, Ao, En, An, Ong, Eng, Ang, Er, I, Ie, Ia, Iu, Iao, In, Ian, Iong, Ing, Iang, U, O, Ua, Ui, Uai, Un, Uan, Uang, Uu, Uue, Uun, Uuan };
 
         public override bool Equals(object obj)
         {
